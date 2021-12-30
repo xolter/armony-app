@@ -5,14 +5,18 @@
   padding: 0;
 }
 
-.home,
-.about,
-.projects,
-.contact,
-.catalog {
+.page-wrap {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  min-height: 100%;
+  margin-bottom: -142px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 142px; 
 }

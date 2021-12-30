@@ -7,10 +7,11 @@ import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Catalog from './components/pages/Catalog';
+import Footer from './components/Footer';
 
 const App: FC = () => {
   return (
-      <Router>
+    <Router>
       <Navbar />  
       <Routes>
         <Route path="/" element={<Home />}>Home</Route>
@@ -18,7 +19,8 @@ const App: FC = () => {
         <Route path="/projects" element={<Projects />}>Projects</Route>
         <Route path="/contact" element={<Contact />}>Contact</Route>
         <Route path="/catalog" element={<Catalog />}>Contact</Route>
-    </Routes>
+      </Routes>
+      <Footer />
     </Router>
   );
 }

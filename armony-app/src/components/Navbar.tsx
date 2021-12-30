@@ -33,7 +33,6 @@ const Navbar: FC = () => {
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-pinterest-p nav-icon"></i></a>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-envelope nav-icon"></i></a>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-link nav-icon"></i></a>
-
         </div>
         <nav className={navbar ? 'navbar active' : 'navbar'}>
           <img src={img1} alt='logo' className={navbar ? 'navbar-logo active' : 'navbar-logo'} />

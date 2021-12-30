@@ -1,0 +1,25 @@
+.footer {
+    height: 142px;
+    background: var(--third-bg-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-social-media {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+  }
+  
+.footer-social-media > a{
+    flex: 1 1 auto;
+}
+
+.copyright {
+    font-weight: bold;
+    color: var(--main-bg-color);
+}

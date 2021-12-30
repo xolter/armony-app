@@ -1,3 +1,9 @@
+:root {
+  --main-bg-color: #f6e9d7;
+  --second-bg-color: #f8a5a4;
+  --third-bg-color: #6b8297;
+}
+
 body {
   margin: 0;
   margin-bottom: 0;

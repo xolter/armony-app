@@ -4,7 +4,7 @@ import '../../App.css';
 const Catalog: FC = () => {
   return (
     <>
-      <h1 className='about'>Catalog</h1>
+      <h1 className='page-wrap'>Catalog</h1>
     </>
   );
 }

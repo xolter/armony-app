@@ -4,7 +4,7 @@ import '../../App.css';
 const Projects: FC = () => {
   return (
     <>
-      <h1 className='projects'>Projects</h1>
+      <h1 className='page-wrap'>Projects</h1>
     </>
   );
 }
