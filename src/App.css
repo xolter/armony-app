@@ -8,9 +8,6 @@
 .page-wrap {
   display: flex;
   height: calc(100vh - 80px);
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
   min-height: 100%;
   margin-bottom: -142px;
 }

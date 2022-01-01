@@ -1,7 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --main-bg-color: #f6e9d7;
   --second-bg-color: #f8a5a4;
   --third-bg-color: #6b8297;
+  --fourth-bg-color: #64a1a4;
+  --fifth-bg-color: #b3bfa4;
 }
 
 body {
@@ -18,4 +24,54 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: -apple-system;
+  color: var(--fourth-bg-color);
+  line-height: 0.9;
+
+}
+
+h1:hover {
+  color: var(--second-bg-color);
+
+}
+
+p {
+  color: var(--fourth-bg-color);
+  font-family: -apple-system;
+}
+
+span {
+  color: var(--fifth-bg-color);
+  font-family: -apple-system;
+}
+
+span:hover {
+  color: var(--second-bg-color);
+  font-weight: bold;
+}
+
+.text-shadow{
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post.arrow-btn {
+  transition: width 300ms ease;
+  width: 50px;
+}
+
+.adjacent-post:hover .arrow-btn{
+  width: 60px;
+}
+
+.react-multi-carousel-list.arrow-btn{
+  transition: width 300ms ease;
+  width: 50px;
+}
+    
+.react-multi-carousel-list.arrow-btn:hover{
+  width: 60px;
 }
