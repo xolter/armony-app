@@ -1,11 +1,18 @@
 import { FC } from 'react';
 import '../../App.css';
+import Slider from '../Slider';
+
+interface IProps {
+  scrollable: boolean
+}
 
 const Home: FC = () => {
   return (
     <>
-      <h1 className='page-wrap'>Home</h1>
-      <h1 className='page-wrap'>Home</h1>
+      <div>
+        <Slider />
+      </div>
+      <h1>Home</h1>
     </>
   );
 }

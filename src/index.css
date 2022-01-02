@@ -57,21 +57,3 @@ span:hover {
 .text-shadow{
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
-
-.adjacent-post.arrow-btn {
-  transition: width 300ms ease;
-  width: 50px;
-}
-
-.adjacent-post:hover .arrow-btn{
-  width: 60px;
-}
-
-.react-multi-carousel-list.arrow-btn{
-  transition: width 300ms ease;
-  width: 50px;
-}
-    
-.react-multi-carousel-list.arrow-btn:hover{
-  width: 60px;
-}
