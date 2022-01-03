@@ -64,7 +64,7 @@
 }
 
 .slide-button:hover {
-    background-color: var(--fourth-bg-color);
+    background-color: var(--third-bg-color);
 }
 
 .slide-index-button {
@@ -90,5 +90,21 @@
         height: 50%;
         top: 20%;
         left: 10%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .slide-title {
+        font-size: 15vw;
+    }
+    
+    .slide-text {
+        color: white;
+        font-size: 8vw;
+        line-height: 1;
+    }
+
+    .slide-button {
+        font-size: 6vw;
     }
 }

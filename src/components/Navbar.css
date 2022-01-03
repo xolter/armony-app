@@ -30,7 +30,7 @@
 
 .nav-icon {
   font-size: 1.2rem;
-  color: var(--main-bg-color);
+  color: white;
 }
 
 .nav-icon:hover {
@@ -84,7 +84,7 @@
 }
 
 .nav-links {
-  color: var(--main-bg-color);
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import '../../App.css';
+import HomeCards from '../HomeCards';
 import Slider from '../Slider';
 
 interface IProps {
@@ -9,10 +10,8 @@ interface IProps {
 const Home: FC = () => {
   return (
     <>
-      <div>
-        <Slider />
-      </div>
-      <h1>Home</h1>
+      <Slider />
+      <HomeCards />
     </>
   );
 }

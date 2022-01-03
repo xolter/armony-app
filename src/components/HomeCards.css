@@ -1,0 +1,103 @@
+.HomeCards {
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 350px));
+    grid-gap: 2rem;
+    padding: 3rem 4.5rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.HomeCard {
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.HomeCard img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.HomeCard h3, .HomeCard p {
+    padding: .5rem;
+}
+
+.HomeCard h3 {
+    text-align: center;
+    color: var(--third-bg-color);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.HomeCard p {
+    color: var(--third-bg-color);
+}
+
+.homeCard-button {
+    
+    width: 60%;
+    margin-bottom: 0.8rem;
+    margin-top: auto;
+    color: white;
+    font-weight: bold;
+    background-color: var(--second-bg-color);
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 0.8rem;
+    transition: all 0.2s ease-in;
+}
+
+.homeCard-button:hover {
+    background-color: var(--third-bg-color);
+}
+
+@media screen and (max-width: 1280px) {
+    .HomeCards {
+        display: grid;
+        height: 600px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+        padding: 4rem;
+    }
+
+    .HomeCard h3 {
+        font-size: 1.5rem;
+    }
+
+    .HomeCard p, .HomeCard a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .HomeCards {
+        height: 1400px;
+        width: 100%;
+        padding: 2rem;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 350px));
+    }
+
+    .HomeCard img {
+        height: 12rem;
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+    .HomeCards {
+        padding: 0.8rem 0.2rem;
+    }
+
+    .HomeCard h3 {
+        font-size: 8vw;
+    }
+
+    .HomeCard p, .HomeCard a {
+        font-size: 4.8vw;
+    }
+}
