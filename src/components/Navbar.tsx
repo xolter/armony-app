@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import img1 from '../images/youtube_logo.png';
 import './Navbar.css';
 
+interface IProps {
+  fixed: boolean
+}
 
-const Navbar: FC = () => {
+const Navbar: FC<IProps> = ({fixed} : IProps) => {
 
   const [click, setClick] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -19,55 +22,51 @@ const Navbar: FC = () => {
     }
   }
 
+  let navBarClasses = 'navbar';
+  if (fixed) {
+    navBarClasses += ' nav-fixed';
+    if (navbar) {
+      navBarClasses += ' active';
+    }
+  }
+
   window.addEventListener('scroll', changeBackground);
-  
+
   return (
     <>
-      <div className='header'>
-        <div className='header-logo'>
-          <img src={img1} alt='logo'/>
+      <nav className={navBarClasses}>
+        <img src={img1} alt='logo' className={fixed ? 'navbar-logo active' : 'navbar-logo'} />
+        <div className='menu-icon' onClick={handleClick}>
+          <i className={click ? 'fas fa-times nav-icon' : 'fas fa-bars nav-icon'} />
         </div>
-        <div className='header-social-media'>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-instagram nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-facebook-f nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-pinterest-p nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-envelope nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-link nav-icon"></i></a>
-        </div>
-        <nav className={navbar ? 'navbar active' : 'navbar'}>
-          <img src={img1} alt='logo' className={navbar ? 'navbar-logo active' : 'navbar-logo'} />
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times nav-icon' : 'fas fa-bars nav-icon'} />
-          </div>
-          <ul className={click ? 'nav-menu active': 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-                About
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
-                Projects
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
-                Contact
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/catalog' className='nav-links' onClick={closeMobileMenu}>
-                Catalog
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul className={click ? 'nav-menu active': 'nav-menu'}>
+          <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+              About
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+              Projects
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
+              Contact
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/catalog' className='nav-links' onClick={closeMobileMenu}>
+              Catalog
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }

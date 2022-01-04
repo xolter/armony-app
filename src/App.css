@@ -18,3 +18,34 @@
   display: block;
   height: 142px; 
 }
+
+.bigTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: BlinkMacSystemFont;
+  color:white;
+  background-color: var(--fifth-bg-color);
+  height: 400px;
+  width: 100%;
+}
+
+.bigTitle:hover {
+  color:white;
+}
+.bigTitle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: BlinkMacSystemFont;
+  color:white;
+  background-color: var(--second-bg-color);
+  height: 600px;
+  width: 100%;
+}

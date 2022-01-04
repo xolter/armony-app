@@ -3,15 +3,15 @@ import '../../App.css';
 import HomeCards from '../HomeCards';
 import Slider from '../Slider';
 
-interface IProps {
-  scrollable: boolean
-}
-
 const Home: FC = () => {
   return (
     <>
       <Slider />
+      <h1 className='bigTitle'>« Incroyable »</h1>
       <HomeCards />
+      <h1 className='bigTitle'>« Surprenant »</h1>
+      <HomeCards />
+      <h1 className='bigTitle2'> </h1>
     </>
   );
 }

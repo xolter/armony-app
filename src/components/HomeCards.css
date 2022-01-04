@@ -14,6 +14,22 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.HomeCard-delay {
+    transition-delay: 150ms;
+}
+
+.HomeCard-delay2 {
+    transition-delay: 230ms;
+}
+
+.HomeCard.active {
+    transform: translateX(0%);
+    opacity: 1;
 }
 
 .HomeCard img {

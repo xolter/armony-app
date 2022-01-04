@@ -10,19 +10,19 @@ const HomeCards: FC = () => {
           <img src={imageUrl} alt='test' />
           <h3>Matériaux</h3>
           <p>Planches d'idées pour vos choix matériaux et couleur. Des conseils pour les différents espaces à aménager.  Suivi d'un compte rendu détaillant mes solutions pas a pas.</p>
-          <a className='homeCard-button'>En savoir plus</a>
+          <a href="/" className='homeCard-button'>En savoir plus</a>
       </div>
-      <div className='HomeCard shadow-lg'>
+      <div className='HomeCard shadow-lg HomeCard-delay'>
           <img src={imageUrl} alt='test' />
           <h3>Réalisations</h3>
           <p>Planches d'idées pour vos choix matériaux et couleur. Des conseils pour les différents espaces à aménager.  Suivi d'un compte rendu détaillant mes solutions pas a pas.</p>
-          <a className='homeCard-button'>En savoir plus</a>
+          <a href="/" className='homeCard-button'>En savoir plus</a>
       </div>
-      <div className='HomeCard shadow-lg'>
+      <div className='HomeCard shadow-lg HomeCard-delay2'>
           <img src={imageUrl} alt='test' />
           <h3>Projets</h3>
           <p>Planches d'idées pour vos choix matériaux et couleur. Des conseils pour les différents espaces à aménager.  Suivi d'un compte rendu détaillant mes solutions pas a pas.</p>
-          <a className='homeCard-button'>En savoir plus</a>
+          <a href="/"className='homeCard-button'>En savoir plus</a>
       </div>
     </div>
   );

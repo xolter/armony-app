@@ -1,19 +1,19 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Catalog from './components/pages/Catalog';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 const App: FC = () => {
   return (
     <Router>
       <header>
-        <Navbar />  
+        <Header />
       </header>
       <Routes>
         <Route path="/" element={<Home />}>Home</Route>
