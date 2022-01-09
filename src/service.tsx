@@ -1,7 +1,11 @@
 import { request, gql } from 'graphql-request';
 import { TPost } from './components/pages/Projects';
 
-const graphqlAPI = '';
+interface ProcessEnv {
+    [key: string]: string | undefined;
+}
+
+const graphqlAPI:ProcessEnv["REACT_APP_API_GRAPHCMS"] = process.env.REACT_APP_API_GRAPHCMS;
 
 export const getPosts = async() => {
     
@@ -20,8 +24,21 @@ export const getPosts = async() => {
         }
     `;
 
-    const data = await request<TPost>(graphqlAPI, query);
-    return data;
+    if (graphqlAPI) {
+        const data = await request<TPost>(graphqlAPI, query).then();
+        return data;
+    } else {
+        const emptyPost: TPost = {posts: [
+            {
+                title: "Example",
+                summary: "",
+                featuredImage: {
+                  url: ""
+                }
+            }
+        ]};
+        return emptyPost;
+    }
 }
 
 
