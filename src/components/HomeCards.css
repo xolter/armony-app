@@ -93,8 +93,6 @@
     .HomeCards {
         height: 1400px;
         width: 100%;
-        padding: 2rem;
-        grid-template-rows: repeat(3, minmax(0, 1fr));
         grid-template-columns: repeat(1, minmax(0, 350px));
     }
 
@@ -106,7 +104,7 @@
 
 @media screen and (max-width: 370px) {
     .HomeCards {
-        padding: 0.8rem 0.2rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .HomeCard h3 {
