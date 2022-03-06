@@ -5,7 +5,6 @@ import './Slider.css'
 const Slider: FC = () => {
 
     const [currentImage, setCurrentImage] = useState<number>(0);
-    //const [isTransitioning, setTransitioning] = useState<boolean>(false);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>, index: number) => {
         /*setCurrentImage(index);
         setTransitioning(true);
@@ -13,20 +12,19 @@ const Slider: FC = () => {
     } 
 
     useEffect(() => {
-        //console.log("current : " + currentImage + " isTransitioning : " + isTransitioning);
+        let isMounted = true;
         setTimeout(() => {
-            /*if (isTransitioning) {
-                setTransitioning(false);
-                setCurrentImage(currentImage);
-                console.log("setTransitioning : " + isTransitioning);
-            }
-            else */if (currentImage === 2) {
-                setCurrentImage(0);
-            } else {
-                setCurrentImage(currentImage + 1);
+            if (isMounted) {
+                if (currentImage === 2) {
+                    setCurrentImage(0);
+                } else {
+                    setCurrentImage(currentImage + 1);
+                }
             }
         }, 5000);
+        return () => { isMounted = false };
     }, [currentImage]);
+
     return (
         <div className="slider">
             <Slide imageUrl='https://mdbcdn.b-cdn.net/img/new/slides/032.webp' title="Bienvenue !" subTitle="Tu lances un projet qui te tiens à coeur et tu souhaites attirer tes clients en ligne ?" isActive={currentImage === 0} currentIndex={0} handleClick={handleClick}/>
