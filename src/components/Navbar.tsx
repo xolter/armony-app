@@ -65,6 +65,11 @@ const Navbar: FC<IProps> = ({fixed} : IProps) => {
               Catalog
             </Link>
           </li>
+          <li className='nav-item'>
+            <Link to='/newsletter-form' className='nav-links' onClick={closeMobileMenu}>
+              Newsletter
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

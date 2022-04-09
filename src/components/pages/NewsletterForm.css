@@ -1,0 +1,62 @@
+.NewsletterPage {
+    justify-content: center;
+    align-items: center;
+}
+
+.NewsletterForm {
+    height: 280px;
+    width: 640px;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+
+.FormElement {
+    padding-bottom: 20px;
+}
+
+.FormTitle {
+    height: 50px;
+    width: 640px;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+input {
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    display: inline-block;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text]::placeholder{
+    color: rgb(170, 170, 170);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--third-bg-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #758fa7;
+}

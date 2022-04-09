@@ -6,6 +6,7 @@ import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Catalog from './components/pages/Catalog';
+import NewsletterForm from './components/pages/NewsletterForm';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -20,7 +21,8 @@ const App: FC = () => {
         <Route path="/about" element={<About />}>About</Route>
         <Route path="/projects" element={<Projects />}>Projects</Route>
         <Route path="/contact" element={<Contact />}>Contact</Route>
-        <Route path="/catalog" element={<Catalog />}>Contact</Route>
+        <Route path="/catalog" element={<Catalog />}>Catalog</Route>
+        <Route path="/newsletter-form" element={<NewsletterForm />}>NewsletterForm</Route>
       </Routes>
       <footer>
         <Footer />
