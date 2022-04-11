@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import img1 from '../images/youtube_logo.png';
+import img1 from '../images/armony_logo.png';
 import Navbar from './Navbar';
 import './Navbar.css';
 
@@ -13,10 +13,9 @@ const Header: FC = () => {
         </div>
         <div className='header-social-media'>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-instagram nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-facebook-f nav-icon"></i></a>
+          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-youtube nav-icon"></i></a>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fab fa-pinterest-p nav-icon"></i></a>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-envelope nav-icon"></i></a>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'><i className="fas fa-link nav-icon"></i></a>
         </div>
         <Navbar fixed={false}/>
         <Navbar fixed={true}/>

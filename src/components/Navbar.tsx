@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import img1 from '../images/youtube_logo.png';
+import img1 from '../images/armony_logo.png';
 import './Navbar.css';
 
 interface IProps {
@@ -42,32 +42,27 @@ const Navbar: FC<IProps> = ({fixed} : IProps) => {
         <ul className={click ? 'nav-menu active': 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-              About
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
-              Projects
+              Accueil
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
-              Contact
+              Mes offres
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/catalog' className='nav-links' onClick={closeMobileMenu}>
-              Catalog
+            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+              Blog DIY
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/newsletter-form' className='nav-links' onClick={closeMobileMenu}>
-              Newsletter
+              Ebook gratuit
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+              A propos
             </Link>
           </li>
         </ul>
