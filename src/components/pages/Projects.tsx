@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import '../../App.css';
 import PostCard from '../PostCard';
-import { getPosts } from '../../service';
+import { getPosts } from '../../services/service';
 
 export interface TPost {
   posts: [

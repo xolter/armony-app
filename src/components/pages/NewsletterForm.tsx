@@ -8,23 +8,31 @@ interface Contact {
   firstName: string
 }
 const NewsletterForm: FC = () => {
- 
-//const MAILCHIMP_URL = process.env.REACT_APP_MAILCHIMP_URL || "";
+
 const [contact, setContact] = useState<Contact>({email:"", firstName:""});
 const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
   const { name, value } = event.target;
   setContact({ ...contact, [name]: value });
 }
 
+const handleSubmitForm = async(event:any) => {
+  event.preventDefault();
+  fetch('/api/contact', {
+    method: "POST",
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify(contact)
+  });
+}
+
 return (
-    //<MailchimpSubscribe url={MAILCHIMP_URL}/>
-    //<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
   <>
   <div className='page-wrap NewsletterPage'>
     <div className='FormTitle drop-shadow-lg'>
         <h2>Télécharger mon E-Book (liste d'attente)</h2>
     </div>
-    <form className='NewsletterForm drop-shadow-lg'>
+    <form className='NewsletterForm drop-shadow-lg' onSubmit={handleSubmitForm}>
       <div className='FormElement'>
         <input type="text" value={contact.firstName} name="firstName" className="" placeholder='Prénom*' onChange={handleInputChange}/>
       </div>
@@ -40,6 +48,4 @@ return (
   );
 }
 
-
 export default NewsletterForm;
-
