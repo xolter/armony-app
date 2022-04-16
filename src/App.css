@@ -26,14 +26,14 @@
   font-size: 3rem;
   font-style: italic;
   font-family: BlinkMacSystemFont;
-  color:white;
+  color: var(--main-bg-color);
   background-color: var(--fifth-bg-color);
   height: 400px;
   width: 100%;
 }
 
 .bigTitle:hover {
-  color:white;
+  color: var(--main-bg-color);
 }
 .bigTitle2 {
   display: flex;
@@ -43,7 +43,7 @@
   font-size: 3rem;
   font-style: italic;
   font-family: BlinkMacSystemFont;
-  color:white;
+  color: var(--main-bg-color);
   background-color: var(--second-bg-color);
   height: 600px;
   width: 100%;

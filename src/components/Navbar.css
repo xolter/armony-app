@@ -30,7 +30,7 @@
 
 .nav-icon {
   font-size: 1.2rem;
-  color: white;
+  color: var(--main-bg-color);
 }
 
 .nav-icon:hover {
@@ -99,7 +99,7 @@
 }
 
 .nav-links {
-  color: white;
+  color: var(--main-bg-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
