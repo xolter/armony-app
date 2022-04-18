@@ -60,3 +60,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #758fa7;
 }
+
+span {
+    color: red;
+}

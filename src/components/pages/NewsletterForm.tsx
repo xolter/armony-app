@@ -1,29 +1,41 @@
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FormEvent, FC, useState } from 'react';
 import './NewsletterForm.css';
 import '../../App.css';
-//import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import { postContact } from '../../services/service';
 
-interface Contact {
+export interface Contact {
   email: string,
   firstName: string
 }
+
 const NewsletterForm: FC = () => {
 
 const [contact, setContact] = useState<Contact>({email:"", firstName:""});
+const [validFirstName, setValidFirstName] = useState<boolean>(true);
+const [validEmail, setValidEmail] = useState<boolean>(true);
 const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
   const { name, value } = event.target;
   setContact({ ...contact, [name]: value });
 }
 
-const handleSubmitForm = async(event:any) => {
+const handleSubmitForm = (event:FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-  fetch('/api/contact', {
-    method: "POST",
-    headers: {
-      "Content-Type":"application/json"
-    },
-    body: JSON.stringify(contact)
-  });
+  if (checkFirstName() && checkEmail()) {
+    postContact(contact).then(res => console.log(res));
+  }
+}
+
+function checkFirstName() {
+  const isValid = contact.firstName !== null && contact.firstName !== "";
+  setValidFirstName(isValid);
+  return isValid;
+}
+
+function checkEmail() {
+  const emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const isValid = emailReg.test(contact.email);
+  setValidEmail(isValid);
+  return isValid;
 }
 
 return (
@@ -34,13 +46,15 @@ return (
     </div>
     <form className='NewsletterForm drop-shadow-lg' onSubmit={handleSubmitForm}>
       <div className='FormElement'>
-        <input type="text" value={contact.firstName} name="firstName" className="" placeholder='Prénom*' onChange={handleInputChange}/>
+        <input type="text" value={contact.firstName} name="firstName" placeholder='Prénom*' onChange={handleInputChange}/>
+        {!validFirstName && <span>Ce champ est requis</span>}
       </div>
       <div className='FormElement'>
-        <input type="text" value={contact.email} name="email" className="" placeholder='Email*' onChange={handleInputChange}/>
+        <input type="text" value={contact.email} name="email" placeholder='Email*' onChange={handleInputChange}/>
+        {!validEmail && <span>Adresse email invalide</span>}
       </div>
       <div className='FormElement'>
-        <input type="submit" value="Envoyer" name="subscribe" className=""/>
+        <input type="submit" name="subscribe"/>
       </div>
     </form>
   </div>
