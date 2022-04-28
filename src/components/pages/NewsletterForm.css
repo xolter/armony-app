@@ -14,6 +14,15 @@
     border-radius: 0 0 20px 20px;
 }
 
+.NewsletterValidation {
+    height: 150px;
+}
+
+.ValidationText {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .FormElement {
     padding-bottom: 20px;
 }
@@ -31,7 +40,7 @@
     border-bottom: 1px solid #ccc;
 }
 
-input {
+input, .ValidationButton {
     border-radius: 4px;
     width: 100%;
 }
@@ -48,7 +57,7 @@ input[type=text]::placeholder{
     color: rgb(170, 170, 170);
 }
 
-input[type=submit] {
+input[type=submit], .ValidationButton {
     width: 100%;
     background-color: var(--third-bg-color);
     color: white;
@@ -61,6 +70,10 @@ input[type=submit]:hover {
     background-color: #758fa7;
 }
 
-span {
+span, .ValidationError {
     color: red;
+}
+
+.ValidationSuccess {
+    color: green;
 }

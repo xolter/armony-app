@@ -21,10 +21,9 @@ export async function postContact(contact: Contact) {
             },
             body: JSON.stringify(contact)
         });
-        const resJson = await response.json();
-        return resJson.message;
+        const res = await response.json();
+        return {code: res.code, message: res.message};
     } catch (error) {
-        //console.log(error);
-        return "Erreur lors de la création du contact, veuillez réessayer";
+        return {code: 500, message: "Erreur lors de l'envoi du formulaire, veuillez réessayer"};
     }
 }

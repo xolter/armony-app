@@ -9,6 +9,7 @@ import Catalog from './components/pages/Catalog';
 import NewsletterForm from './components/pages/NewsletterForm';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Validation from './components/pages/Validation';
 
 const App: FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: FC = () => {
         <Route path="/contact" element={<Contact />}>Contact</Route>
         <Route path="/catalog" element={<Catalog />}>Catalog</Route>
         <Route path="/newsletter-form" element={<NewsletterForm />}>NewsletterForm</Route>
+        <Route path="/newsletter-form/validation" element={<Validation />}>NewsletterForm-Validation</Route>
       </Routes>
       <footer>
         <Footer />

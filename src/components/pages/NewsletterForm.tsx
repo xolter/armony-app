@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, FC, useState } from 'react';
 import './NewsletterForm.css';
 import '../../App.css';
 import { postContact } from '../../services/service';
+import { useNavigate } from 'react-router-dom';
 
 export interface Contact {
   email: string,
@@ -17,11 +18,12 @@ const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
   const { name, value } = event.target;
   setContact({ ...contact, [name]: value });
 }
+let navigate = useNavigate();
 
 const handleSubmitForm = (event:FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   if (checkFirstName() && checkEmail()) {
-    postContact(contact).then(res => console.log(res));
+    postContact(contact).then(res => { navigate('/newsletter-form/validation', {state:res}); });
   }
 }
 
