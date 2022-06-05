@@ -1,0 +1,54 @@
+.HomeGallery {
+    height: auto;
+}
+
+.HomeGalleryImage {
+    min-width: inherit;
+    min-height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.HomeGalleryGrid {
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 350px));
+    grid-gap: 1rem;
+    padding: 2rem;
+    
+}
+
+@media screen and (max-width: 1280px) {
+    .HomeGalleryGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 1rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .HomeGalleryGrid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 600px));
+    }
+
+    .HomeGalleryImage {
+        max-height: 400px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .HomeGalleryGrid {
+        grid-template-columns: repeat(1, minmax(0, 600px));
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .HomeGalleryGrid {
+        padding: 0.8rem 1.5rem;
+    }
+}
