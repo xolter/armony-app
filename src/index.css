@@ -11,10 +11,20 @@
   --sixth-bg-color: #ffd591;
 }
 
+@font-face {
+  font-family: 'Momcake-Bold';
+  src: url('./fonts/momcake/Momcake-Bold.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: 'Momcake-Thin';
+  src: url('./fonts/momcake/Momcake-Thin.otf') format('OpenType');
+}
+
 body {
   margin: 0;
   margin-bottom: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Momcake-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,8 +39,8 @@ code {
 
 h1 {
   font-size: 3rem;
-  font-family: -apple-system;
-  color: var(--fourth-bg-color);
+  font-family: 'Momcake-Bold', -apple-system;
+  color: var(--main-bg-color);
   line-height: 0.9;
 
 }
@@ -42,7 +52,7 @@ h1:hover {
 
 p {
   color: var(--fourth-bg-color);
-  font-family: -apple-system;
+  font-family: momcake, -apple-system;
 }
 
 .text-shadow{

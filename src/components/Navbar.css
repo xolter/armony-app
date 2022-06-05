@@ -7,13 +7,18 @@
 }
 
 .header-logo {
-  width: 300px;
   padding-top: 20px;
+  text-align: center;
+  z-index: 1;
 }
 
-.header-logo > img{
-  width: 100%;
-  object-fit: cover;
+.header-logo > h1{
+  font-size: 9rem;
+}
+
+.header-logo > h2{
+  font-size: 2rem;
+  color: var(--main-bg-color);
 }
 
 .header-social-media {
@@ -22,6 +27,7 @@
   align-items: center;
   justify-content: space-between;
   width: 13vw;
+  z-index: 1;
 }
 
 .header-social-media > a{
@@ -65,24 +71,17 @@
 
 .navbar-logo {
   display: flex;
-  width: 80px;
   padding-top: 0px;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transform: translate(25%, 50%);
+  font-size: 2rem;
+  transform: translate(10%, 90%);
 }
 
 .navbar-logo.active {
-  display: flex;
-  width: 80px;
-  padding-top: 0px;
-  position: absolute;
-  top: 0;
-  left: 0;
   opacity: 1;
-  transform: translate(25%, 50%);
 }
 
 .nav-menu {
@@ -102,6 +101,7 @@
   color: var(--main-bg-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-size: 1.5rem;
 }
 
 .nav-links:hover {
@@ -111,6 +111,22 @@
 
 .menu-icon {
   display: none;
+}
+
+#drawings img {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  object-fit: contain;
+  max-height: 327px;
+}
+
+#left_drawing {
+  left: 0;
+}
+
+#right_drawing {
+  right: 0;
 }
 
 @media screen and (max-width: 960px) {

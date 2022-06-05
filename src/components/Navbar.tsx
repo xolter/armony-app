@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import img1 from '../images/armony_logo.png';
 import './Navbar.css';
 
 interface IProps {
@@ -35,7 +34,7 @@ const Navbar: FC<IProps> = ({fixed} : IProps) => {
   return (
     <>
       <nav className={navBarClasses}>
-        <img src={img1} alt='logo' className={fixed ? 'navbar-logo active' : 'navbar-logo'} />
+        <h1 className={fixed ? 'navbar-logo active' : 'navbar-logo'}>ARMONY</h1>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times nav-icon' : 'fas fa-bars nav-icon'} />
         </div>
