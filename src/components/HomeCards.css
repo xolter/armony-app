@@ -1,9 +1,9 @@
 .HomeCards {
-    height: 600px;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 350px));
     grid-gap: 2rem;
-    padding: 3rem 4.5rem;
+    padding: 2rem 4.5rem;
     justify-content: center;
     align-items: stretch;
 }
@@ -74,10 +74,9 @@
 @media screen and (max-width: 1280px) {
     .HomeCards {
         display: grid;
-        height: 600px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-gap: 2rem;
-        padding: 4rem;
+        padding: 2rem;
     }
 
     .HomeCard h3 {
@@ -91,7 +90,6 @@
 
 @media screen and (max-width: 768px) {
     .HomeCards {
-        height: 1400px;
         width: 100%;
         grid-template-columns: repeat(1, minmax(0, 350px));
     }

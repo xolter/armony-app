@@ -77,3 +77,9 @@ span, .ValidationError {
 .ValidationSuccess {
     color: green;
 }
+
+@media screen and (max-width: 768px) {
+    .NewsletterForm, .FormTitle {
+        width: 80vw;
+    }
+}

@@ -11,7 +11,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-const homeCardsElts = document.querySelectorAll('.HomeCard');
+/*const homeCardsElts = document.querySelectorAll('.HomeCard');
 window.addEventListener('scroll', () => {
   const {scrollTop, clientHeight} = document.documentElement;
   for (let i = 0; i < homeCardsElts.length; ++i) {
@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
       }
     }
   }
-})
+})*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
