@@ -14,6 +14,7 @@
 
 .header-logo > h1{
   font-size: 9rem;
+  letter-spacing: 40px;
 }
 
 .header-logo > h2{
@@ -78,6 +79,7 @@
   opacity: 0;
   font-size: 2rem;
   transform: translate(10%, 90%);
+  letter-spacing: 10px;
 }
 
 .navbar-logo.active {
@@ -86,7 +88,7 @@
 
 .nav-menu {
   display: flex;
-  width: 60vw;
+  width: 70vw;
 }
 
 .nav-item {

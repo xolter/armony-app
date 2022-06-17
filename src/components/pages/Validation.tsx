@@ -34,7 +34,7 @@ const Validation: FC = () => {
   return (
     <div className='page-wrap NewsletterPage'>
       <div className='FormTitle drop-shadow-lg'>
-          <h2>Télécharger mon E-Book (liste d'attente)</h2>
+          <h2>TELECHARGER MON EBOOK GRATUIT (LISTE D'ATTENTE)</h2>
       </div>
       <div className='NewsletterForm NewsletterValidation drop-shadow-lg'>
         <div className='ValidationText'>

@@ -14,7 +14,7 @@ const Header: FC = () => {
           <img id="right_drawing" alt="right_drawing" src={img2} />
         </div>
         <div className='header-logo'>
-          <h1 className='logoTitle'>ARMONY</h1>
+          <h1>ARMONY</h1>
           <h2>BRICOLAGE ET DIY - COACHINGS ET CREATIONS</h2>
         </div>
         <div className='header-social-media'>

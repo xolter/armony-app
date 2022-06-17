@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: row nowrap;
     height: 600px;
+    background-color: var(--third-bg-color);
 }
 
 .slider-item {
@@ -39,23 +40,23 @@
 }
 
 .slide-title {
-    color: white;
+    color: var(--main-bg-color);
     font-size: 4rem;
     line-height: 0.9;
     padding-bottom: 2.4rem;
 }
 
 .slide-text {
-    color: white;
+    color: var(--main-bg-color);
     font-size: 2rem;
     line-height: 1;
     padding-bottom: 3rem;
 }
 
 .slide-button {
-    color: white;
+    color: var(--third-bg-color);
     font-weight: bold;
-    background-color: var(--second-bg-color);
+    background-color: var(--main-bg-color);
     border-radius: 9999px;
     cursor: pointer;
     padding: 1rem;
@@ -63,7 +64,7 @@
 }
 
 .slide-button:hover {
-    background-color: var(--third-bg-color);
+    background-color: var(--main-bg-color);
 }
 
 .slide-index-button {
@@ -98,7 +99,6 @@
     }
     
     .slide-text {
-        color: white;
         font-size: 8vw;
         line-height: 1;
     }

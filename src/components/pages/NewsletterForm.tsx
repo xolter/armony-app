@@ -44,15 +44,15 @@ return (
   <>
   <div className='page-wrap NewsletterPage'>
     <div className='FormTitle drop-shadow-lg'>
-        <h2>Télécharger mon E-Book (liste d'attente)</h2>
+        <h2>TELECHARGER MON EBOOK GRATUIT (LISTE D'ATTENTE)</h2>
     </div>
     <form className='NewsletterForm drop-shadow-lg' onSubmit={handleSubmitForm}>
       <div className='FormElement'>
-        <input type="text" value={contact.firstName} name="firstName" placeholder='Prénom*' onChange={handleInputChange}/>
+        <input type="text" value={contact.firstName} name="firstName" placeholder='PRENOM*' onChange={handleInputChange}/>
         {!validFirstName && <span>Ce champ est requis</span>}
       </div>
       <div className='FormElement'>
-        <input type="text" value={contact.email} name="email" placeholder='Email*' onChange={handleInputChange}/>
+        <input type="text" value={contact.email} name="email" placeholder='EMAIL*' onChange={handleInputChange}/>
         {!validEmail && <span>Adresse email invalide</span>}
       </div>
       <div className='FormElement'>
