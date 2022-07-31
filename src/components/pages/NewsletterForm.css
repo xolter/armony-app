@@ -1,9 +1,8 @@
-.NewsletterPage {
-    justify-content: center;
+.newsletter-page {
     align-items: center;
 }
 
-.NewsletterForm {
+.newsletter-form {
     height: 280px;
     width: 640px;
     padding: 1.5rem 2.5rem;
@@ -14,20 +13,20 @@
     border-radius: 0 0 20px 20px;
 }
 
-.NewsletterValidation {
+.newsletter__validation {
     height: 150px;
 }
 
-.ValidationText {
+.newsletter__validation-text {
     text-align: center;
     padding-bottom: 20px;
 }
 
-.FormElement {
+.newsletter-form__form-element {
     padding-bottom: 20px;
 }
 
-.FormTitle {
+.newsletter-form__title {
     height: 50px;
     width: 640px;
     padding: 1.5rem 2.5rem;
@@ -39,8 +38,38 @@
     box-sizing: border-box;
     border-bottom: 1px solid #ccc;
 }
+.newsletter-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    width: 100%;
+}
+.newsletter-block_blue {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    background-color: var(--third-bg-color);
+    width: 100%;
+}
 
-input, .ValidationButton {
+.newsletter-block_blue > p {
+    color: var(--main-bg-color);
+}
+
+.no-padding-bot, .no-padding-bot:hover {
+    padding-bottom: 0;
+}
+
+.title-medium_main-color {
+    color: var(--main-bg-color);
+    background-color: var(--third-bg-color);
+}
+
+input, .newsletter__validation-button {
     border-radius: 4px;
     width: 100%;
 }
@@ -57,7 +86,7 @@ input[type=text]::placeholder{
     color: rgb(170, 170, 170);
 }
 
-input[type=submit], .ValidationButton {
+input[type=submit], .newsletter__validation-button  {
     width: 100%;
     background-color: var(--third-bg-color);
     color: white;
@@ -70,16 +99,40 @@ input[type=submit]:hover {
     background-color: #758fa7;
 }
 
-span, .ValidationError {
+span, .newsletter__validation_red {
     color: red;
 }
 
-.ValidationSuccess {
+.newsletter__validation_green {
     color: green;
 }
 
+.arrows-img {
+    max-height:150px;
+}
+
+.newsletter-button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.offer-button {
+    color: var(--main-bg-color);
+    background-color: var(--second-bg-color);
+    font-family: 'BAHNSCHRIFT', -apple-system, 'Ubuntu', 'Cantarell', 'sans-serif';
+    font-size: 2.4rem;
+    padding: 5px 8vw;
+}
+
+.offer-button:hover {
+    color: var(--third-bg-color);
+}
+
 @media screen and (max-width: 768px) {
-    .NewsletterForm, .FormTitle {
+    .newsletter-form, .newsletter-form__title {
         width: 80vw;
     }
 }

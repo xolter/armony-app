@@ -21,6 +21,11 @@
   src: url('./fonts/momcake/Momcake-Thin.otf') format('OpenType');
 }
 
+@font-face {
+  font-family: 'BAHNSCHRIFT';
+  src: url('./fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF') format('truetype');
+}
+
 body {
   margin: 0;
   margin-bottom: 0;
@@ -51,8 +56,9 @@ h1:hover {
 }
 
 p {
-  color: var(--fourth-bg-color);
-  font-family: momcake, -apple-system;
+  color: var(--third-bg-color);
+  font-family: 'BAHNSCHRIFT', -apple-system, 'Ubuntu', 'Cantarell', 'sans-serif';
+  font-size: 1.1rem;
 }
 
 .text-shadow{

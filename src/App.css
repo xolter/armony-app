@@ -18,7 +18,7 @@
   height: 142px; 
 }
 
-.bigTitle {
+.title-big_main-color {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.bigTitle2 {
+.title-big_second-color {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,4 +40,25 @@
   background-color: var(--main-bg-color);
   height: 600px;
   width: 100%;
+}
+
+.title-medium, .title-medium:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--third-bg-color);
+  height: auto;
+  padding: 40px;
+  letter-spacing: 0.3rem;
+}
+
+.subtitle, .subtitle:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--third-bg-color);
+  height: auto;
+  letter-spacing: 0.2rem;
 }

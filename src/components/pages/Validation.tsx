@@ -17,10 +17,10 @@ const Validation: FC = () => {
   let textStyle = null;
   let buttonMessage;
   if (code && code === "200") {
-    textStyle = "ValidationSuccess";
+    textStyle = "newsletter__validation_green";
     buttonMessage = "Retour à l'accueil";
   } else {
-    textStyle = "ValidationError";
+    textStyle = "newsletter__validation_red";
     buttonMessage = "Retour au formulaire";
   }
   const handleClick = () => {
@@ -32,16 +32,16 @@ const Validation: FC = () => {
   }
 
   return (
-    <div className='page-wrap NewsletterPage'>
-      <div className='FormTitle drop-shadow-lg'>
+    <div className='page-wrap newsletter-page'>
+      <div className='newsletter-form__title drop-shadow-lg'>
           <h2>TELECHARGER MON EBOOK GRATUIT (LISTE D'ATTENTE)</h2>
       </div>
-      <div className='NewsletterForm NewsletterValidation drop-shadow-lg'>
-        <div className='ValidationText'>
+      <div className='newsletter-form newsletter__validation drop-shadow-lg'>
+        <div className='newsletter__validation-text'>
         {state && state.message && textStyle && <h2 className={ textStyle }>{ state.message }</h2>}
         </div>
         <div >
-          <button className='ValidationButton' onClick={ handleClick }>{ buttonMessage }</button>
+          <button className='newsletter__validation-button' onClick={ handleClick }>{ buttonMessage }</button>
         </div>
       </div>
     </div>
